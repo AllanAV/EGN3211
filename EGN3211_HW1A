@@ -1,0 +1,33 @@
+/*
+UCF EGN 3211
+FALL 2018
+Prof. Sundar Sinnappan
+
+*** Homework 1A ***
+by Allan Aquino Vieira
+*/
+
+#include<stdio.h>
+
+#define COMMISION (float) 9 / 100
+#define PROMPT "Enter  sales in dollars (-1 to end): "
+#define PAY_OUT "Salary is: $"
+
+
+int main (void) 
+{
+	float sale = 0.00;
+	do{
+		printf("%s",PROMPT);
+		scanf("%f", &sale);
+		if(sale != -1)
+		{
+			float salary = sale * COMMISION +200.00;
+			printf("%s%.2f \n \n", PAY_OUT, salary);
+		}
+		//reset variable
+		float sale = 0.00;
+		
+	}while(sale != -1); 
+   return 0;
+}
