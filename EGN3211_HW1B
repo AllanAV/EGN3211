@@ -1,0 +1,53 @@
+/*
+UCF EGN 3211
+FALL 2018
+Prof. Sundar Sinnappan
+
+*** Homework 1B ***
+by Allan Aquino Vieira
+*/
+
+#include<stdio.h>
+
+//Definitions
+#define PRINCIPAL_PROMPT "Enter loan principal (-1 to end): "
+#define INTEREST_PROMPT "Enter interest rate: "
+#define TERM_PROMPT "Enter term of the loan in days: "
+#define CHARGE_PROMPT "The interest charge is $"
+
+int main (void) 
+{
+	//Variable Declaration & Initiation
+	float principal = 0.00;
+	float rate = 0.00;
+	float days = 0;
+	
+	do{
+		printf("%s",PRINCIPAL_PROMPT);
+		scanf("%f", &principal);
+		//printf("%.2f\n",principal);
+		
+		if(principal != -1)
+		{
+			printf("%s",INTEREST_PROMPT);
+			scanf("%f", &rate);
+			//printf("%.2f\n",rate);
+		
+			printf("%s",TERM_PROMPT);
+			scanf("%f", &days);
+			//printf("%.0f\n",days);
+			
+			float interest = principal * rate * days / 365;
+		
+			printf("%s%.2f \n\n",CHARGE_PROMPT, interest);
+			
+			//Variables Reset
+			principal = 0.00;
+			rate = 0.00;
+			days = 0;
+			interest = 0;
+		}
+	}while(principal != -1);
+	
+	return 0;
+}
