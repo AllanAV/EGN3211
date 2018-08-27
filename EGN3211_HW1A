@@ -16,7 +16,7 @@ by Allan Aquino Vieira
 
 int main (void) 
 {
-	//Variable Definition & Initiation
+	//Variable Declaration & Initiation
 	float sale = 0.00;
 	
 	do{
