@@ -9,14 +9,16 @@ by Allan Aquino Vieira
 
 #include<stdio.h>
 
+//Definitions
 #define COMMISION (float) 9 / 100
 #define PROMPT "Enter  sales in dollars (-1 to end): "
 #define PAY_OUT "Salary is: $"
 
-
 int main (void) 
 {
+	//Variable Definition & Initiation
 	float sale = 0.00;
+	
 	do{
 		printf("%s",PROMPT);
 		scanf("%f", &sale);
@@ -26,8 +28,8 @@ int main (void)
 			printf("%s%.2f \n \n", PAY_OUT, salary);
 		}
 		//reset variable
-		float sale = 0.00;
-		
-	}while(sale != -1); 
+		float sale = 0.00;	
+	}while(sale != -1);
+	
    return 0;
 }
