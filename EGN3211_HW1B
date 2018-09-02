@@ -3,38 +3,45 @@ UCF EGN 3211
 FALL 2018
 Prof. Sundar Sinnappan
 
-*** Homework 1B Problem 3.19***
+*** Homework 1B ***
 by Allan Aquino Vieira
 */
 
 #include<stdio.h>
 
 //Definitions
-#define PRINCIPAL_PROMPT "Enter loan principal (-1 to end): "
-#define INTEREST_PROMPT "Enter interest rate: "
-#define TERM_PROMPT "Enter term of the loan in days: "
-#define CHARGE_PROMPT "The interest charge is $"
+#define CLS fflush(stdin)
 
 int main (void) 
 {
-	//Variable Declaration & Initiation
-	float principal = 0.00;
-	float rate = 0.00;
-	float days = 0;
+	//Constants Declaration & Initiation
+	const char PRINCIPAL_PROMPT[]="Enter loan principal (-1 to end): ";
+	const char INTEREST_PROMPT[]= "Enter interest rate: ";
+	const char TERM_PROMPT[]= "Enter term of the loan in days: ";
+	const char CHARGE_PROMPT[]= "The interest charge is $";
 	
-	do{
+	//Global Variable Declaration & Initiation
+	float principal = 0.00;
+	
+	do{	
 		printf("%s",PRINCIPAL_PROMPT);
 		scanf("%f", &principal);
 		//printf("%.2f\n",principal);
 		
 		if(principal != -1)
 		{
+			//Local Variables Declaration & Initiation
+			float rate = 0.00;
+			float days = 0.00;
+			
 			printf("%s",INTEREST_PROMPT);
 			scanf("%f", &rate);
+			CLS;
 			//printf("%.2f\n",rate);
 		
 			printf("%s",TERM_PROMPT);
 			scanf("%f", &days);
+			CLS;
 			//printf("%.0f\n",days);
 			
 			float interest = principal * rate * days / 365;
