@@ -10,20 +10,24 @@ by Allan Aquino Vieira
 #include<stdio.h>
 
 //Definitions
-#define COMMISION (float) 9 / 100
-#define PROMPT "Enter  sales in dollars (-1 to end): "
-#define PAY_OUT "Salary is: $"
+#define CLS fflush(stdin);
 
 int main (void) 
 {
-	//Variable Declaration & Initiation
+	//Variables Declaration & Initiation
 	float sale = 0.00;
+	
+	//Constants Declaration & Initiation
+	const float COMMISION = (float)9/100;
+	const char PROMPT[] = "Enter  sales in dollars (-1 to end): ";
+	const char PAY_OUT[] = "Salary is: $";
 	
 	do{
 		float salary = 0.00;
 		
 		printf("%s",PROMPT);
 		scanf("%f", &sale);
+		CLS
 		if(sale != -1)
 		{
 			salary = sale * COMMISION +200.00;
@@ -37,4 +41,5 @@ int main (void)
 	}while(sale != -1);
 	
    return 0;
+}
 }
