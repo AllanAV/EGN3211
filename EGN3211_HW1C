@@ -1,1 +1,67 @@
+/*
+UCF EGN 3211
+FALL 2018
+Prof. Sundar Sinnappan
 
+*** Homework 1C ***
+by Allan Aquino Vieira
+*/
+
+#include<stdio.h>
+#include <stdlib.h>
+#include<time.h>
+
+//Definitions
+#define CLS fflush(stdin)
+
+//Global Constants Declarations and initializations
+const int BEGINING=1;
+const char PROMPT[]="Please enter a number between 3 and 20 or -1 to end: ";
+
+int main (void) 
+{
+	
+	//Variable Declaration & Initiation
+	int size=3;
+
+	while(size>=3 && size<=20)
+	{
+		printf("%s", PROMPT);
+		scanf("%d",&size);
+		CLS;
+		
+		if(size>=3 && size<=20)
+		{
+			printf("\n");//Output formating
+			for (int y = BEGINING; y <= size; y++)
+			{
+				for (int x = BEGINING; x <= size; x++)
+				{
+					if (y == BEGINING || y == size)
+					{
+						printf("*");
+					}else if (x == BEGINING || x == size)
+					{
+						printf("*");
+					}else
+					{
+						printf(" ");
+					}
+				}
+				printf("\n");
+			}
+			printf("\n");//Output formating
+		}
+		else if(size==-1)
+		{
+			//printf("\nBye ;)\n");
+		}
+		else
+		{
+			printf("\n!!! %d is an invalid entry !!!\n\n", size);
+			size=3;
+		}
+	}
+
+	return 0;
+}
