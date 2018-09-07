@@ -14,54 +14,53 @@ by Allan Aquino Vieira
 //Definitions
 #define CLS fflush(stdin)
 
-//Global Constants Declarations and initializations
-const int BEGINING=1;
-const char PROMPT[]="Please enter a number between 3 and 20 or -1 to end: ";
+
 
 int main (void) 
 {
-	
-	//Variable Declaration & Initiation
+	//Local Variable Declaration & Initiation
 	int size=3;
-
-	while(size>=3 && size<=20)
+	int x = 1;
+	int y =1;
+	
+	printf("Please enter a number between 3 and 20: ");
+	scanf("%d",&size);
+	CLS;
+	
+	system ("CLS");
+	//printf("\n");//Formating
+	
+	while(y <= size)
 	{
-		printf("%s", PROMPT);
-		scanf("%d",&size);
-		CLS;
-		
-		if(size>=3 && size<=20)
+		while(x <= size)
 		{
-			printf("\n");//Output formating
-			for (int y = BEGINING; y <= size; y++)
+			if(y==1)
 			{
-				for (int x = BEGINING; x <= size; x++)
-				{
-					if (y == BEGINING || y == size)
-					{
-						printf("*");
-					}else if (x == BEGINING || x == size)
-					{
-						printf("*");
-					}else
-					{
-						printf(" ");
-					}
-				}
-				printf("\n");
+				printf("*");
 			}
-			printf("\n");//Output formating
+			else if(y==size)
+			{
+				printf("*");
+			}
+			else
+			{
+				if(x==1)
+				{
+					printf("*");
+				}
+				else if (x==size)
+				{
+					printf("*");
+				}
+				else
+				{
+					printf(" ");
+				}
+			}
+			x++;
 		}
-		else if(size==-1)
-		{
-			//printf("\nBye ;)\n");
-		}
-		else
-		{
-			printf("\n!!! %d is an invalid entry !!!\n\n", size);
-			size=3;
-		}
+		printf("\n");
+		y++;
+		x = 1;
 	}
-
-	return 0;
 }
