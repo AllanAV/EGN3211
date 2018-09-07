@@ -8,8 +8,6 @@ by Allan Aquino Vieira
 */
 
 #include<stdio.h>
-#include <stdlib.h>
-#include<time.h>
 
 //Definitions
 #define CLS fflush(stdin)
