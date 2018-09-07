@@ -14,18 +14,14 @@ by Allan Aquino Vieira
 
 int main (void) 
 {
-	//Constants Declaration & Initiation
-	const char PRINCIPAL_PROMPT[]="Enter loan principal (-1 to end): ";
-	const char INTEREST_PROMPT[]= "Enter interest rate: ";
-	const char TERM_PROMPT[]= "Enter term of the loan in days: ";
-	const char CHARGE_PROMPT[]= "The interest charge is $";
-	
 	//Global Variable Declaration & Initiation
 	float principal = 0.00;
 	
-	do{	
-		printf("%s",PRINCIPAL_PROMPT);
+	while(principal != -1)
+	{	
+		printf("Enter loan principal (-1 to end): ");
 		scanf("%f", &principal);
+		CLS;
 		//printf("%.2f\n",principal);
 		
 		if(principal != -1)
@@ -34,19 +30,19 @@ int main (void)
 			float rate = 0.00;
 			float days = 0.00;
 			
-			printf("%s",INTEREST_PROMPT);
+			printf("Enter interest rate: ");
 			scanf("%f", &rate);
 			CLS;
 			//printf("%.2f\n",rate);
 		
-			printf("%s",TERM_PROMPT);
+			printf("Enter term of the loan in days: ");
 			scanf("%f", &days);
 			CLS;
 			//printf("%.0f\n",days);
 			
 			float interest = principal * rate * days / 365;
 		
-			printf("%s%.2f \n\n",CHARGE_PROMPT, interest);
+			printf("The interest charge is $%.2f \n\n",interest);
 			
 			//Variables Reset
 			principal = 0.00;
@@ -54,7 +50,6 @@ int main (void)
 			days = 0;
 			interest = 0;
 		}
-	}while(principal != -1);
-	
+	}
 	return 0;
 }
