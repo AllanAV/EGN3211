@@ -18,27 +18,26 @@ int main (void)
 	float sale = 0.00;
 	
 	//Constants Declaration & Initiation
-	const float COMMISION = (float)9/100;
-	const char PROMPT[] = "Enter  sales in dollars (-1 to end): ";
-	const char PAY_OUT[] = "Salary is: $";
+	const float COMMISION = 9.0/100;
 	
-	do{
+	while(sale != -1)
+	{	
 		float salary = 0.00;
 		
-		printf("%s",PROMPT);
+		printf("Enter  sales in dollars (-1 to end): ");
 		scanf("%f", &sale);
 		CLS;
+		
 		if(sale != -1)
 		{
 			salary = sale * COMMISION +200.00;
-			printf("%s%.2f \n \n", PAY_OUT, salary);
-			//salary reset
+			printf("Salary is: $ %.2f \n\n", salary);
+			
+			//variables reset
 			salary = 0.00;
-			//sale variable reset
 			sale = 0.00;
-		}
-		
-	}while(sale != -1);
+		}	
+	}
 	
    return 0;
 }
