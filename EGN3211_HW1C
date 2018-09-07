@@ -12,8 +12,6 @@ by Allan Aquino Vieira
 //Definitions
 #define CLS fflush(stdin)
 
-
-
 int main (void) 
 {
 	//Local Variable Declaration & Initiation
@@ -26,7 +24,7 @@ int main (void)
 	CLS;
 	
 	system ("CLS");
-	//printf("\n");//Formating
+	printf("\n");//Formating
 	
 	while(y <= size)
 	{
