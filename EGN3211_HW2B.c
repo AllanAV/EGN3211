@@ -2,7 +2,6 @@
 UCF EGN 3211
 FALL 2018
 Prof. Sundar Sinnappan
-
 *** Homework 2B ***
 by Allan Aquino Vieira
 */
@@ -10,7 +9,7 @@ by Allan Aquino Vieira
 #include <stdio.h>
 
 //Definitions
-#define CLEAR fflush(stdin)
+#define CLRIN fflush(stdin)
 
 int main (void)
 {
@@ -21,7 +20,7 @@ int main (void)
 			
 		printf("Please enter number between 1 and 10 for factorial calculation (-1 to end) :");
 		scanf("%d", &factorial);
-		CLEAR;
+		CLRIN;
 		
 		//Loop Local Variable Declaration & Initiation
 		int sum = factorial;

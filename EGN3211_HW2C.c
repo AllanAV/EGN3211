@@ -2,7 +2,6 @@
 UCF EGN 3211
 FALL 2018
 Prof. Sundar Sinnappan
-
 *** Homework 2C ***
 by Allan Aquino Vieira
 */
@@ -14,7 +13,7 @@ by Allan Aquino Vieira
 
 int main (void)
 {
-	//Constants Declaration
+	//Constants Declaration and Initiation
 	const char QTY_PROMPT[] = "Please enter quantity sold: ";
 	const float itemPrice[5] = {2.98, 4.50, 9.98, 4.49, 6.87};
 	
@@ -34,45 +33,37 @@ int main (void)
 		}
 	
 		printf("%s", QTY_PROMPT);
+		//Do ...While Local Variable Declaration and Initialization
+		unsigned int qtyEntry = 0;
+		scanf("%u", &qtyEntry); //why this does not work????
+		CLRIN;
+		
 		
 		switch (productNumber)
-		{
-			//Switch Local Variable Declaration and Initialization
-			unsigned int qtyEntry = 0;
-			
-			case 1:
-				scanf("%u", &qtyEntry);
-				CLRIN;
+		{	
+			case 1:	
 				itemQty[productNumber-1] += qtyEntry;
 				itemSales[productNumber-1] = itemPrice[productNumber-1] * itemQty[productNumber-1];
 				break;
 			case 2:
-				scanf("%u", &qtyEntry);
-				CLRIN;
 				itemQty[productNumber-1] += qtyEntry;
 				itemSales[productNumber-1] = itemPrice[productNumber-1] * itemQty[productNumber-1];
 				break;
 			case 3:
-				scanf("%u", &qtyEntry);
-				CLRIN;
 				itemQty[productNumber-1] += qtyEntry;
 				itemSales[productNumber-1] = itemPrice[productNumber-1] * itemQty[productNumber-1];
 				break;
 			case 4:
-				scanf("%u", &qtyEntry);
-				CLRIN;
 				itemQty[productNumber-1] += qtyEntry;
 				itemSales[productNumber-1] = itemPrice[productNumber-1] * itemQty[productNumber-1];
 				break;
 			case 5:
-				scanf("%u", &qtyEntry);
-				CLRIN;
 				itemQty[productNumber-1] += qtyEntry;
 				itemSales[productNumber-1] = itemPrice[productNumber-1] * itemQty[productNumber-1];
 				break;
 			default:
 				printf("%d is an invalid entry!", productNumber);
-				break;		
+				break;
 		}
 	}while (productNumber != -1);
 	

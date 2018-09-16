@@ -2,15 +2,14 @@
 UCF EGN 3211
 FALL 2018
 Prof. Sundar Sinnappan
-
-*** Homework 1A ***
+*** Homework 2A ***
 by Allan Aquino Vieira
 */
 
 #include<stdio.h>
 
 //Definitions
-#define CLEAR fflush(stdin)
+#define CLRIN fflush(stdin)
 
 int main (void)
 {
@@ -21,7 +20,7 @@ int main (void)
 	
 	printf("Please enter number of values to be entered :");
 	scanf("%u", &entries);
-	CLEAR;
+	CLRIN;
 	
 	for(unsigned int i = 1; i<= entries; i++)
 	{
@@ -30,7 +29,7 @@ int main (void)
 		
 		printf("Please enter #%d :",i);
 		scanf("%d", &input);
-		CLEAR;
+		CLRIN;
 		
 		sum += input;
 	}
