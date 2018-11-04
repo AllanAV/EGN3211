@@ -4,6 +4,7 @@ FALL 2018
 Prof. Sundar Sinnappan
 *** Homework 6A ***
 by Allan Aquino Vieira
+https://github.com/AllanAV/EGN3211/blob/master/EGN3211_HW6A.c
 */
  #include <stdio.h>
 #include <stdlib.h>
