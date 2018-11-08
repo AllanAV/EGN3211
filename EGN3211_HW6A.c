@@ -6,7 +6,8 @@ Prof. Sundar Sinnappan
 by Allan Aquino Vieira
 https://github.com/AllanAV/EGN3211/blob/master/EGN3211_HW6A.c
 */
- #include <stdio.h>
+
+#include <stdio.h>
 #include <stdlib.h>
  //Union Definition
 union data
