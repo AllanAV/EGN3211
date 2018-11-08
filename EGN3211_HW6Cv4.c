@@ -153,6 +153,6 @@ void packCharacter(char letter, unsigned int *dataPtr)
 {
 	*dataPtr <<= 8;
 	//printf("\n%u ^ %c",*dataPtr, letter);//TEST PURPOSES
-	*dataPtr ^= (unsigned int)letter;
+	*dataPtr |= (unsigned int)letter;
 	//printf(" = %u\n",*dataPtr);//TEST PURPOSES
 }
