@@ -50,13 +50,14 @@ int main(void)
 	double ans;
 	for(int i = 1; fx <= precision; ++i)
 	{
-		fx = (double)(A * pow(guess, 3) + B * pow(guess, 2) + C * guess + D);
+		fx = (double)(A * guess * guess * guess + B * guess * guess + C * guess + D);
 		printf("\n\nf(x)=%.10f", fx);
 		
-		dx = (double)(3 * A * pow(guess, 2) + 2 * B * guess + C);
+		dx = (double)(3 * A * guess * guess + 2 * B * guess + C);
 		printf("\ndx/dy=%.10f", dx);
 		
 		printf("\n(fx/dx)=%.10f", (fx/dx));
+		printf("\nNRI=%f", (guess - (fx/dx)));
 		
 		guess = (guess - (fx/dx));
 		printf("\n%d : guess : %.10f\n", i, guess);
