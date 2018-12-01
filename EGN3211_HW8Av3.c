@@ -4,13 +4,11 @@ FALL 2018
 Prof. Sundar Sinnappan
 *** Homework 8A ***
 by Allan Aquino Vieira
-
+https://github.com/AllanAV/EGN3211/blob/master/EGN3211_HW8Av3.c
 */
 
 #include <stdio.h>
 #include <math.h>
-
-//double NRM(double A, double B, double C, double D, double guess);
 
 int main(void)
 {
@@ -77,27 +75,3 @@ int main(void)
 	return 0;
 }
 
-double NRM(double A, double B, double C, double D, double guess)
-{
-	//NRM Variable Definitions
-	double fx;
-	double dx;
-	
-	fx = (A * pow(guess, 3) + B * pow(guess, 2) + C * guess + D);
-	printf("\nf(x)=%f", fx);
-	
-	dx = (A * pow(guess, 2) + B * guess + C);
-	printf("\ndx/dy=%f", dx);
-	
-	if(fx > 0.00001 && fx < 0.000001)
-	{
-		guess = (guess - (fx/dx));
-		printf("\nNRI=%f", guess);
-		guess = NRM(A, B, C, D, guess);
-		
-	}
-	//else
-	{
-		//return guess;
-	}
-}
